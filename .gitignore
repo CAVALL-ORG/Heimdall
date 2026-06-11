@@ -1,0 +1,45 @@
+node_modules/
+dist/
+coverage/
+*.local.*
+.DS_Store
+.venv/
+.indigo-venv/
+playwright-report/
+
+# Python bytecode caches (grader.py + test_grader.py)
+__pycache__/
+*.pyc
+*.pyo
+
+# Agent-tool worktree isolation scratch (created per subagent; never committed)
+.claude/worktrees/
+
+# Track only the clone-and-run skills symlink under .agents/ (Cursor + Codex
+# native discovery); ignore any other local agent scratch under .agents/.
+.agents/*
+!.agents/skills
+
+# Per-request output directories. To preserve a specific run as a checked-in
+# deliverable, force-add it: `git add -f outputs/<task-slug>/`.
+# Test runs land under `outputs/tests/{agent-orch,cli}/<run-id>/` — covered
+# by the same wildcard. The legacy paths `tests/runs/` and
+# `tests/scientific/runner/results/` are no longer used.
+outputs/*
+!outputs/.gitkeep
+
+# The in-package runner writes forensic test artifacts (agent-orch run dirs,
+# build dumps) under server/outputs/ — same intent as the root
+# outputs/, not covered by the root-anchored wildcard above.
+server/outputs/
+
+# Example PDFs used to validate ketcher-pdf-extract (journal articles, ~10 MB,
+# copyright). Local validation inputs, not test fixtures (the unit suite uses
+# synthetic rasters). Force-add a specific example to version it.
+pdf_examples/
+
+# Belt-and-suspenders: the test runbook forbids `_tmp_*.ts` / `_tmp_*.png`
+# files outside `outputs/tests/agent-orch/<run-id>/`. The orchestrator audits
+# and deletes leaks post-run, but if one slips through this rule keeps it out
+# of git. To intentionally version a scratch file, name it differently.
+_tmp_*

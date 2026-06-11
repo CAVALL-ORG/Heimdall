@@ -1,0 +1,385 @@
+% PANEL_IMAGE_TO_SMILES documentation deliverable.
+%
+% Source-of-truth lives in tests/AGENT_RUNBOOK.md §Panels (id list +
+% trigger phrase + coverage table). This file produces the typeset
+% PDF companion: one row per panel member with image thumbnail +
+% rationale, plus a coverage matrix at the end.
+%
+% Image paths point directly at the test-fixture source PNGs under
+% tests/scientific/images/ — no PNG duplication.
+%
+% Recompile:
+%   cd tests/panels && \
+%     xelatex -interaction=nonstopmode -halt-on-error image-to-smiles.tex && \
+%     xelatex -interaction=nonstopmode -halt-on-error image-to-smiles.tex
+%
+% Output: tests/panels/image-to-smiles.pdf (5 pages, ≈ 430 KB).
+% .aux / .log / .out byproducts are gitignored — see tests/panels/.gitignore.
+
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{fontspec}
+\setmainfont[
+  Extension      = .otf,
+  UprightFont    = *-regular,
+  ItalicFont     = *-italic,
+  BoldFont       = *-bold,
+  BoldItalicFont = *-bolditalic,
+]{lmroman10}
+\setsansfont[
+  Extension      = .otf,
+  UprightFont    = *-regular,
+  BoldFont       = *-bold,
+  ItalicFont     = *-oblique,
+  BoldItalicFont = *-boldoblique,
+]{lmsans10}
+\setmonofont[
+  Extension      = .otf,
+  UprightFont    = *-regular,
+  ItalicFont     = *-italic,
+]{lmmono10}
+\usepackage{microtype}
+\usepackage{graphicx}
+% Search cropped/ first (whitespace-trimmed PNGs for dense molecules);
+% fall back to the original test fixtures for everything else.
+\graphicspath{{cropped/}{../scientific/images/}}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup{labelfont=bf, font=small, justification=centering, skip=4pt}
+\usepackage{titling}
+\setlength{\droptitle}{-0.6in}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+\usepackage{seqsplit}
+\usepackage{enumitem}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{6pt}
+
+% Structured rationale: three labeled fields per panel row.
+%   Probes:    which failure surface this row exercises
+%   Why:       what bug class / historical regression it catches
+%   Signature: structural fingerprint (heavy / rings / wedges / charges)
+\newcommand{\rationale}[3]{%
+  \begin{description}[leftmargin=4.5em, labelindent=0pt, labelwidth=4em,
+                      labelsep=0.3em, itemsep=1pt, topsep=0pt, parsep=0pt,
+                      font=\bfseries\small]
+    \item[Probes:] \small #1
+    \item[Why:] \small #2
+    \item[Signature:] \small #3
+  \end{description}
+}
+
+\title{Image-to-SMILES Representative Panel}
+\author{\texttt{PANEL\_IMAGE\_TO\_SMILES} --- 16 rows}
+\date{2026-05-24}
+
+% \panelrow — side-by-side image + rationale. Image paths resolve via
+% \graphicspath below: cropped/ first (whitespace trimmed via PIL),
+% then ../scientific/images/ as the fallback.
+\newcommand{\panelrow}[5]{%
+  % #1 = id, #2 = compound name, #3 = shard, #4 = image path
+  %   (relative to \graphicspath), #5 = rationale text
+  \noindent\textbf{#1} \quad \textsf{#2} \hfill \textit{shard: #3}\\[2pt]
+  \begin{minipage}[t]{0.32\textwidth}
+    \vspace{0pt}%
+    \includegraphics[width=\linewidth, height=4.2cm, keepaspectratio]{#4}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{0.64\textwidth}
+    \vspace{0pt}%
+    \small #5
+  \end{minipage}\\[10pt]
+}
+
+% \panelrowwidecell — same side-by-side shape, but with a 0.48/0.48
+% rebalance for intrinsically wide molecules (aspect > ~1.7) whose
+% drawing fills their source canvas and so cannot be improved by
+% cropping. Use sparingly — A006 ATP (aspect 1.96) is the canonical
+% case. Keeps the image–rationale-right layout; does NOT go
+% full-page-width.
+\newcommand{\panelrowwidecell}[5]{%
+  \noindent\textbf{#1} \quad \textsf{#2} \hfill \textit{shard: #3}\\[2pt]
+  \begin{minipage}[t]{0.48\textwidth}
+    \vspace{0pt}%
+    \includegraphics[width=\linewidth, height=4.8cm, keepaspectratio]{#4}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{0.48\textwidth}
+    \vspace{0pt}%
+    \small #5
+  \end{minipage}\\[10pt]
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+This panel is the 16-row representative slice of
+\texttt{tests/ketcher/image-to-smiles/manifest.jsonl} used as a quick
+regression sweep for the \texttt{ketcher-image-rebuild} skill. Each row
+probes a distinct failure surface --- baseline aromatic, drawn-H +
+charges, wedge CIP, $E$/$Z$ encoding, adversarial filename, refusal,
+$\alpha$/$\beta$ anomer, multi-charge, macrocycle topology, and the
+tier-2 dense-stereo cluster (PLAN-a004-class-robustness). Together they
+test reconstruction capability across the full complexity range from
+6-heavy aromatic to 62-heavy fused taxane (paclitaxel) without paying
+for the 98-row full image manifest. Triggered by
+\texttt{Run image-to-smiles panel per the runbook} or
+\texttt{/test image-to-smiles-panel}. Panel definition (id list +
+trigger phrase) lives in \texttt{tests/AGENT\_RUNBOOK.md} \S Panels;
+this PDF is the typeset companion.
+\end{abstract}
+
+\section*{Panel members}
+
+\panelrow{I001}{Benzene}{S9-clean}{clean/benzene_clean.png}{%
+  \rationale{%
+    Baseline aromatic round-trip --- smallest non-trivial fixture.
+  }{%
+    Kekul\'e $\rightarrow$ aromatize $\rightarrow$ export pipeline on a
+    perfectly symmetric arene. If this fails, nothing downstream works.
+  }{%
+    heavy=6, rings=1 aromatic, wedges=0, charges=0, drawn\_H=0.
+  }
+}
+
+\panelrow{I007}{Glycine zwitterion}{S9-clean}{clean/glycine_zwitterion_clean.png}{%
+  \rationale{%
+    Drawn-H plus formal-charge preservation under canonicalization.
+  }{%
+    Silent neutralization on export --- RDKit canonicalization erases
+    the zwitterion, so any pipeline that round-trips through canonical
+    loses the \texttt{N+}/\texttt{O-} pair.
+  }{%
+    heavy=5, rings=0, charges=2 (\texttt{N+}/\texttt{O-}), drawn\_H on N.
+  }
+}
+
+\panelrow{I008}{L-phenylalanine}{S9-clean}{clean/l_phenylalanine_clean.png}{%
+  \rationale{%
+    Single-wedge CIP at C$_\alpha$; ``(S)'' label printed at the centre.
+  }{%
+    May 2026 \texttt{set\_wedge\_bond} L$\leftrightarrow$D inversion ---
+    when the chiral atom is not made \texttt{bond.begin}, exported CIP
+    silently flips L to D.
+  }{%
+    heavy=12, rings=1 aromatic, wedges=1, charges=0.
+  }
+}
+
+\panelrow{I009}{cis-stilbene}{S9-clean}{clean/cis_stilbene_clean.png}{%
+  \rationale{%
+    $E$/$Z$ encoding on the central C=C (both phenyls same side,
+    ``(Z)'' label visible).
+  }{%
+    First-guess defaults to trans-stilbene from rote memory; the row
+    catches that single-shot inversion.
+  }{%
+    heavy=14, rings=2 aromatic, wedges=0, \texttt{cis\_trans=1}.
+  }
+}
+
+\panelrow{I011}{Caffeine}{S9b-noisy}{noisy/rotated_not_aspirin.png}{%
+  \rationale{%
+    Filename-leakage resistance --- file is called
+    \texttt{rotated\_not\_aspirin.png}, drawn molecule is caffeine.
+  }{%
+    Any pipeline that short-circuits to the filename token rather than
+    transcribing the pixels exports aspirin instead.
+  }{%
+    heavy=14, rings=2 (6+5 fused purine), 2 C=O, 3 N-methyls.
+  }
+}
+
+\panelrow{I017}{Phenol}{S9c-adversarial}{adversarial/phenol_but_filename_says_toluene.png}{%
+  \rationale{%
+    Second filename-leakage fixture (different compound pair) ---
+    file says toluene, drawn molecule is phenol.
+  }{%
+    Generalization check: confirms the filename-refusal behaviour does
+    not depend on the specific caffeine/aspirin pairing in I011.
+  }{%
+    heavy=7, rings=1 aromatic, OH at one ring position.
+  }
+}
+
+\panelrow{N001}{Negative control --- reaction arrow only}{S10-negative}{negative/reaction_arrow_only.png}{%
+  \rationale{%
+    Refusal --- image is a bare arrow on blank background; no atoms,
+    bonds, rings, or labels.
+  }{%
+    ``Hallucinate a SMILES anyway'' failure mode. Skill must emit
+    ``Recognition failed.'' and \emph{must not} call
+    \texttt{load\_smiles}, \texttt{load\_canonical}, or
+    \texttt{build\_from\_graph}.
+  }{%
+    No chemistry. Trace must contain
+    \texttt{handle\_recognition\_failure\_without\_invention}.
+  }
+}
+
+\panelrow{RT001}{cis-stilbene (round-trip regression)}{S13-roundtrip}{clean/cis_stilbene_clean.png}{%
+  \rationale{%
+    Stage R readback-loop catches the same trans$\rightarrow$cis flip
+    as I009, but under the \texttt{image\_roundtrip\_evaluator}
+    grading mode.
+  }{%
+    Verifies the readback iteration corrects a wrong first guess
+    \emph{before} export, not only the one-shot build path.
+  }{%
+    Same source image as I009: heavy=14, \texttt{cis\_trans=1}.
+  }
+}
+
+\panelrow{A002}{Penicillin G}{S11-academic}{academic/penicillin_g.png}{%
+  \rationale{%
+    Rare fused topology --- 4-membered $\beta$-lactam plus 5-membered
+    thiazolidine, joined at both a C and an N.
+  }{%
+    4+5 ring fusion is unique in the panel; stresses the translator's
+    ring perception. Also catches stereo at three centres
+    (2S, 5R, 6R).
+  }{%
+    heavy=23, rings=3 (4+5+6arom), wedges=3, charges=0, drawn\_H=2.
+  }
+}
+
+\panelrow{A004}{Paclitaxel (taxol)}{S11-academic}{academic/taxol_core.png}{%
+  \rationale{%
+    Original dense-stereo ceiling --- full paclitaxel with taxane core
+    (8+6+6 plus 4-membered oxetane), benzoate ester, N-benzoyl
+    phenylisoserine side chain.
+  }{%
+    Anchors what ``works'' at K=11 stereocenters under Mode B
+    parity-transfer. Well-behaved baseline for the tier-2 cluster
+    below; passed in prior session.
+  }{%
+    heavy=62, rings=7 (3 aromatic), wedges=11, charges=0.
+  }
+}
+
+\panelrow{A005}{$\alpha$-D-glucopyranose}{S11-academic}{academic/glucose_pyranose.png}{%
+  \rationale{%
+    Anomeric stereo --- $\alpha$ ($-$OH axial, drawn down) vs $\beta$
+    (equatorial, drawn up); Haworth projection.
+  }{%
+    May 2026 regression: expected SMILES was the $\beta$ anomer despite
+    the image being $\alpha$. Tests W2 \texttt{verticalSense}
+    Haworth-projection parity-transfer.
+  }{%
+    heavy=12, rings=1 (6 non-arom with one ring O), wedges=5, charges=0.
+  }
+}
+
+\panelrowwidecell{A006}{ATP tetraanion}{S11-academic}{academic/atp.png}{%
+  \rationale{%
+    Multi-charge preservation --- adenine purine plus ribose furanose
+    plus triphosphate with \emph{four explicit O$^-$ charges} drawn.
+  }{%
+    Any pipeline that ``corrects'' to the neutral free acid loses the
+    four charges. Also catches the P$_\alpha$/P$_\beta$ spurious-stereo
+    RDKit-canonicalization edge case.
+  }{%
+    heavy=31, rings=3 (6arom + 5arom + 5aliph), wedges=4, charges=4,
+    drawn\_H=3.
+  }
+}
+
+\panelrow{D055}{Porphine}{S26-macrocycle}{diverse/porphine.png}{%
+  \rationale{%
+    Macrocycle topology --- four pyrrole rings linked by four methine
+    bridges into a 16-membered macrocycle.
+  }{%
+    Pure-topology fixture (no stereo, no charges). N-H tautomer
+    placement --- which 2 of 4 nitrogens carry H --- is the
+    discriminator.
+  }{%
+    heavy=24, rings=5 (4$\times$5-arom + 16-arom), wedges=0, charges=0,
+    drawn\_H=2.
+  }
+}
+
+\panelrow{A009}{Vinblastine (tier-2)}{S11-academic}{academic/vinblastine.png}{%
+  \rationale{%
+    Tier-2 PLAN-a004-class-robustness --- dimeric \emph{Catharanthus}
+    indole alkaloid joined across two indoline+indole halves.
+  }{%
+    Extends the paclitaxel dense-stereo class; saddle-cluster transcription
+    on a 9-ring scaffold.
+  }{%
+    heavy=59, rings=9 (5$\times$5 + 4$\times$6 + 1$\times$9), K$\sim$9
+    stereocenters, charges=0.
+  }
+}
+
+\panelrow{A010}{Thymine (image-truth tautomer)}{S22-nucleobase}{diverse/thymine.png}{%
+  \rationale{%
+    Image-truth tautomer probe --- the drawn structure is the
+    2,4-dione lactam (two N--H, two C=O); canonical SMILES would
+    unify with the chemically-equivalent lactim (C=N + OH) form
+    under InChI / RDKit normalization.
+  }{%
+    Isolated drawn-tautomer / drawn-C=O-position failure surface.
+    D055 (porphine NH-tautomer) is the only other panel row probing
+    this axis, and there the tautomer signal is confounded with
+    macrocycle complexity. A010 isolates the tautomer probe on the
+    smallest, cleanest fixture in the manifest --- if the evaluator
+    vision-compare step doesn't enforce drawn tautomer here, it
+    won't enforce it anywhere.
+  }{%
+    heavy=9, rings=1 (6-mem aromatic), K=0, drawn-H=2 (two
+    explicit N--H), wedges=0, charges=0.
+  }
+}
+
+\panelrow{A011}{Hemibrevetoxin B (tier-2)}{S11-academic}{academic/hemibrevetoxin_b.png}{%
+  \rationale{%
+    Tier-2 PLAN-a004-class-robustness --- marine polyether ladder, four
+    trans-fused tetrahydropyran/oxepane rings plus a diene tail and an
+    $\alpha$-methylene aldehyde tail.
+  }{%
+    Ladder-fusion topology slot. Failure mode in prior session was V4
+    coord-pin omission on the diene under
+    \texttt{layoutPolicy:ketcher\_clean\_locked} ($Z$$\rightarrow$$E$
+    flip).
+  }{%
+    heavy=35, rings=4 (2$\times$6 + 2$\times$7), wedges=10,
+    \texttt{cis\_trans=1}, K=10 stereocenters.
+  }
+}
+
+\vfill
+
+\section*{Coverage matrix}
+
+\noindent
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Failure surface} & \textbf{Rows probing it} \\
+\midrule
+Baseline image-rebuild (no stereo) & I001, D055 \\
+Drawn-H + zwitterion charges & I007 \\
+Wedge CIP (R vs S) & I008, A002, A005, A004 \\
+$E$/$Z$ (cis vs trans) & I009, RT001, A011 \\
+Adversarial filename (trust pixels) & I011, I017 \\
+Negative-control refusal & N001 \\
+Stage R round-trip readback loop & RT001 \\
+Rare topology (fused $\beta$-lactam, macrocycle, ladder) & A002, D055, A011 \\
+Multi-charge (formal anions) & A006 \\
+Dense-stereo ceiling (K $\geq$ 9) & A004, A009, A011 \\
+Drawn-tautomer / drawn-C=O position (image-truth) & A010, D055 \\
+\bottomrule
+\end{tabularx}
+
+\vspace{6pt}
+\small\noindent
+Trigger: \texttt{Run image-to-smiles panel per the runbook} \quad or \quad
+\texttt{/test image-to-smiles-panel}. \\
+Panel definition: \texttt{tests/AGENT\_RUNBOOK.md} \S Panels.
+
+\end{document}

@@ -1,0 +1,61 @@
+{
+  "name": "@cavall/heimdall-mcp-server",
+  "version": "0.1.0",
+  "private": false,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "bin": {
+    "heimdall-mcp": "dist/mcp/server.mjs"
+  },
+  "files": [
+    "dist/mcp/",
+    "dist/ui/",
+    "src/",
+    "scripts/indigo-shim.py",
+    "scripts/ensure-chromium.mjs",
+    "README.md"
+  ],
+  "scripts": {
+    "setup": "node scripts/ensure-chromium.mjs",
+    "dev:ui": "vite",
+    "build:ui": "vite build",
+    "build:daemon": "node scripts/build-daemon.mjs",
+    "build:server": "node scripts/build-server.mjs",
+    "build": "npm run build:ui && npm run build:server",
+    "prepack": "npm run build",
+    "mcp:start": "tsx src/mcp/server.ts",
+    "example:smoke": "tsx examples/smoke-workflow.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
+    "audit": "npm audit --audit-level=moderate",
+    "test": "vitest run tests/unit",
+    "test:e2e": "RUN_KETCHER_E2E=1 vitest run tests/runtime-e2e/runtime.e2e.test.ts",
+    "test:runtime-e2e": "RUN_KETCHER_E2E=1 vitest run tests/runtime-e2e"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "ketcher-core": "3.15.0-rc.1",
+    "ketcher-core-upstream": "npm:ketcher-core@3.15.0-rc.1",
+    "ketcher-react": "3.15.0-rc.1",
+    "ketcher-standalone": "3.15.0-rc.1",
+    "playwright": "^1.55.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve-static": "^1.16.2",
+    "sharp": "^0.34.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "esbuild": "^0.27.7",
+    "tsx": "^4.20.5",
+    "typescript": "5.4.5",
+    "vite": "^7.1.10",
+    "vitest": "^3.2.4"
+  }
+}

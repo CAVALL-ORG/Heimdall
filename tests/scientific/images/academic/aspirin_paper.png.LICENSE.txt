@@ -1,0 +1,6 @@
+A001
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Aspirin-skeletal.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Aspirin skeletal formula (PD).
+Expected SMILES: CC(=O)Oc1ccccc1C(=O)O
+Notes: Used as a paper-style figure stand-in. Replace with a journal figure URL when one is licensed for redistribution.

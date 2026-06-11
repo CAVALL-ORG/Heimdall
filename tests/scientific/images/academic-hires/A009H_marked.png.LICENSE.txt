@@ -1,0 +1,21 @@
+A009H_marked
+Source: synthesized via Indigo two-pass layout→render of manifest expected_canonical_smiles
+Indigo layout endpoint: http://127.0.0.1:8002/v2/indigo/layout
+Indigo render endpoint: http://127.0.0.1:8002/v2/indigo/render
+Render dims: 4000x3000
+Source SMILES: CC[C@@]1(O)CN2C[C@H](C[C@](C(OC)=O)(C3C=C4[C@@]56[C@@H](N(C)C4=CC=3OC)[C@@](O)(C(OC)=O)[C@H](OC(C)=O)[C@]3(CC)C=CCN([C@H]53)CC6)C3NC4C(=CC=CC=4)C=3CC2)C1
+Variant: layout-cleaned (fresh 2D coords via /v2/indigo/layout) before rasterizing.
+License: derived asset — Indigo render of canonical SMILES; no third-party copyright.
+Original fixture: tests/scientific/images/academic/vinblastine.png (paired control).
+Sibling hi-res fixture: A009H_hires.png (same SMILES, different layout pass).
+Layout-disambiguation outcome (2026-05-28): pixel-diff shows this render is
+visually identical to A009H_hires.png at the velbanamine bisindole cage —
+Indigo's CleanFP layout pass converged to the same 2D embedding as
+direct-from-SMILES render for this canonical SMILES. The bisindole cage
+crossings present in A009H_hires are NOT eliminated. This is the documented
+"this molecule cannot be drawn without crossings under Indigo's planar
+layout" outcome flagged in the task brief — A009H represents a true
+vision-tier ceiling for this class, not a convention-handling artifact.
+Strategy (2) bond-break-mark options were not tried; Indigo's render API
+does not expose a layout-time crossing-mark option in 1.43.0-rc.
+Notes: Vinblastine — tier-2 calibration row (PLAN-a004-class-robustness-2026-05-22). Dimeric Catharanthus indole alkaloid; K~9 saddle clusters across two indoline + indole halves. Topology slot: extends A004 paclitaxel class. Source: PubChem CID 13342; primary-source X-ray: Moncrief & Lipscomb, J. Am. Chem. Soc. 1965, 87, 4963 (DOI 10.1021/ja00949a056).

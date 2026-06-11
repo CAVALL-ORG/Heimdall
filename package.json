@@ -1,0 +1,13 @@
+{
+  "name": "heimdall-workspace",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "workspaces": [
+    "server"
+  ],
+  "scripts": {
+    "build:server": "npm run build -w server",
+    "test:server": "npm run test -w server",
+    "test:image-transport": "RUN_KETCHER_E2E=1 npx tsx tests/scientific/runner/image_transport.integration.test.ts"
+  }
+}

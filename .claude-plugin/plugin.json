@@ -1,0 +1,10 @@
+{
+  "name": "heimdall",
+  "description": "Image/PDF -> SMILES with Ketcher as the source of truth: transcribe drawn structures, never free-style SMILES.",
+  "version": "0.1.0",
+  "author": { "name": "Cavall Labs", "email": "ethan@cavall.ai" },
+  "homepage": "https://github.com/CAVALL-ORG/Heimdall",
+  "repository": "https://github.com/CAVALL-ORG/Heimdall",
+  "license": "BSD-3-Clause",
+  "keywords": ["chemistry", "smiles", "molecule", "ketcher", "image-to-structure", "ocr"]
+}

@@ -1,0 +1,6 @@
+A004
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Taxol.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Taxol skeletal (PD).
+Expected SMILES: CC1=C2[C@@]([C@](C[C@@H]3[C@]2(CO3)OC(=O)C)O)([C@H](C[C@@H]4[C@]1(O)CCC4=O)O)C
+Notes: Stretch case — large macrocyclic terpenoid. Expect frequent legitimate refusal.

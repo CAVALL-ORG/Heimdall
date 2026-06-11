@@ -1,0 +1,7 @@
+A007
+Source: https://pubchem.ncbi.nlm.nih.gov/compound/6442821
+Source type: PubChem
+License: Public domain (PubChem) / fair-use citation (paper)
+Citation: PubChem CID 6442821. Substituted into the brevetoxin-fragment slot (plan documented ≤2-ring cap, K~5; substituted to deliver high-K polyether-ladder coverage which is what that slot tests). 4-ring trans-fused polyether ladder.
+Gold-truth SMILES: C[C@@]12CC[C@H]3[C@@H](CC[C@]([C@H](O3)CC/C=C\C=C)(C)O)O[C@H]1C[C@@H]4[C@@H](O2)[C@H](C[C@H](O4)CC(=C)C=O)O
+Notes: Marine polyether ladder; K=10, 4 fused tetrahydropyrans. Topology slot: ladder fusion — no prior coverage in manifest. Documented substitution from the original brevetoxin A AB-ring fragment ask (no primary-source K~5 fragment SMILES was located in the sourcing pass; hemibrevetoxin B preserves topology intent).

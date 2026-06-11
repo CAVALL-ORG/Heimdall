@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "atoms": [
+    {
+      "id": 0,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 258,
+      "y": 195
+    },
+    {
+      "id": 1,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 345,
+      "y": 45
+    },
+    {
+      "id": 2,
+      "element": "N",
+      "drawn_H": 2,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 375,
+      "y": 275
+    },
+    {
+      "id": 3,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 155,
+      "y": 195
+    },
+    {
+      "id": 4,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 85,
+      "y": 95
+    },
+    {
+      "id": 5,
+      "element": "O",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 95,
+      "y": 295
+    }
+  ],
+  "bonds": [
+    {
+      "a": 0,
+      "b": 1,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 0
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    }
+  ],
+  "rings": [],
+  "counts": {
+    "heavy": 6,
+    "rings": 0,
+    "heteroatoms": {
+      "O": 2,
+      "N": 1
+    }
+  }
+}

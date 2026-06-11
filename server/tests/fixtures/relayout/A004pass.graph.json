@@ -1,0 +1,1209 @@
+{
+  "version": 1,
+  "atoms": [
+    {
+      "id": 1,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 210,
+      "y": 130
+    },
+    {
+      "id": 2,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 290,
+      "y": 175
+    },
+    {
+      "id": 3,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 290,
+      "y": 265
+    },
+    {
+      "id": 4,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 210,
+      "y": 310
+    },
+    {
+      "id": 5,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 130,
+      "y": 265
+    },
+    {
+      "id": 6,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phA",
+      "x": 130,
+      "y": 175
+    },
+    {
+      "id": 7,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 160,
+      "y": 365
+    },
+    {
+      "id": 8,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 95,
+      "y": 400
+    },
+    {
+      "id": 9,
+      "element": "N",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 310,
+      "y": 395
+    },
+    {
+      "id": 10,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 305,
+      "y": 500,
+      "stereo": "declared"
+    },
+    {
+      "id": 11,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 200,
+      "y": 555
+    },
+    {
+      "id": 12,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 115,
+      "y": 520
+    },
+    {
+      "id": 13,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 40,
+      "y": 565
+    },
+    {
+      "id": 14,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 40,
+      "y": 655
+    },
+    {
+      "id": 15,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 115,
+      "y": 700
+    },
+    {
+      "id": 16,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phB",
+      "x": 200,
+      "y": 655
+    },
+    {
+      "id": 17,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 390,
+      "y": 540,
+      "stereo": "declared"
+    },
+    {
+      "id": 18,
+      "element": "O",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 400,
+      "y": 640
+    },
+    {
+      "id": 19,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 470,
+      "y": 490
+    },
+    {
+      "id": 20,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 470,
+      "y": 400
+    },
+    {
+      "id": 21,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 555,
+      "y": 535
+    },
+    {
+      "id": 30,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rA",
+      "x": 645,
+      "y": 470,
+      "stereo": "declared"
+    },
+    {
+      "id": 31,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rA",
+      "x": 720,
+      "y": 560
+    },
+    {
+      "id": 32,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rA",
+      "x": 810,
+      "y": 520,
+      "stereo": "declared"
+    },
+    {
+      "id": 33,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 915,
+      "y": 545,
+      "stereo": "declared"
+    },
+    {
+      "id": 34,
+      "element": "C",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 990,
+      "y": 455,
+      "wedge_to_implicit_h": "hashed",
+      "stereo": "declared"
+    },
+    {
+      "id": 35,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rC",
+      "x": 1075,
+      "y": 510,
+      "stereo": "declared"
+    },
+    {
+      "id": 36,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rC",
+      "x": 1160,
+      "y": 470,
+      "stereo": "declared"
+    },
+    {
+      "id": 37,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1135,
+      "y": 575
+    },
+    {
+      "id": 38,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1235,
+      "y": 545
+    },
+    {
+      "id": 39,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rC",
+      "x": 1160,
+      "y": 360
+    },
+    {
+      "id": 40,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rC",
+      "x": 1095,
+      "y": 290,
+      "stereo": "declared"
+    },
+    {
+      "id": 41,
+      "element": "O",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1095,
+      "y": 195
+    },
+    {
+      "id": 42,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rC",
+      "x": 960,
+      "y": 300,
+      "stereo": "declared"
+    },
+    {
+      "id": 43,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 975,
+      "y": 205
+    },
+    {
+      "id": 44,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 895,
+      "y": 290
+    },
+    {
+      "id": 45,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 960,
+      "y": 190
+    },
+    {
+      "id": 46,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 820,
+      "y": 290,
+      "stereo": "declared"
+    },
+    {
+      "id": 47,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 745,
+      "y": 355
+    },
+    {
+      "id": 48,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rA",
+      "x": 645,
+      "y": 360
+    },
+    {
+      "id": 49,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 585,
+      "y": 345
+    },
+    {
+      "id": 50,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "rB",
+      "x": 820,
+      "y": 425
+    },
+    {
+      "id": 51,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 775,
+      "y": 345
+    },
+    {
+      "id": 52,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 905,
+      "y": 425
+    },
+    {
+      "id": 53,
+      "element": "O",
+      "drawn_H": 1,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 800,
+      "y": 585
+    },
+    {
+      "id": 54,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 915,
+      "y": 610
+    },
+    {
+      "id": 55,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 845,
+      "y": 690
+    },
+    {
+      "id": 56,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 905,
+      "y": 760
+    },
+    {
+      "id": 57,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 760,
+      "y": 690
+    },
+    {
+      "id": 58,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 680,
+      "y": 650
+    },
+    {
+      "id": 59,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 600,
+      "y": 690
+    },
+    {
+      "id": 60,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 600,
+      "y": 775
+    },
+    {
+      "id": 61,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 680,
+      "y": 815
+    },
+    {
+      "id": 62,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": "phC",
+      "x": 760,
+      "y": 775
+    },
+    {
+      "id": 63,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1055,
+      "y": 600
+    },
+    {
+      "id": 64,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1120,
+      "y": 680
+    },
+    {
+      "id": 65,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1055,
+      "y": 760
+    },
+    {
+      "id": 66,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 1200,
+      "y": 720
+    },
+    {
+      "id": 67,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 785,
+      "y": 360
+    },
+    {
+      "id": 68,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 710,
+      "y": 235
+    },
+    {
+      "id": 69,
+      "element": "O",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 640,
+      "y": 110
+    },
+    {
+      "id": 70,
+      "element": "C",
+      "drawn_H": null,
+      "charge": 0,
+      "radical": 0,
+      "ring": null,
+      "x": 635,
+      "y": 290
+    }
+  ],
+  "bonds": [
+    {
+      "a": 1,
+      "b": 2,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 6,
+      "b": 1,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 4,
+      "b": 7,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 7,
+      "b": 8,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 7,
+      "b": 9,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 9,
+      "b": 10,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 10
+    },
+    {
+      "a": 11,
+      "b": 12,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 12,
+      "b": 13,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 13,
+      "b": 14,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 14,
+      "b": 15,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 15,
+      "b": 16,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 16,
+      "b": 11,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 10,
+      "b": 11,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 10,
+      "b": 17,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 17,
+      "b": 18,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 17
+    },
+    {
+      "a": 17,
+      "b": 19,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 19,
+      "b": 20,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 19,
+      "b": 21,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 48,
+      "b": 47,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 47,
+      "b": 50,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 50,
+      "b": 32,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 32,
+      "b": 31,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 31,
+      "b": 30,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 30,
+      "b": 48,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 32,
+      "b": 33,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 33,
+      "b": 34,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 34,
+      "b": 42,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 42,
+      "b": 44,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 44,
+      "b": 46,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 46,
+      "b": 47,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 34,
+      "b": 35,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 35,
+      "b": 36,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 36,
+      "b": 39,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 39,
+      "b": 40,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 40,
+      "b": 42,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 35,
+      "b": 37,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 35
+    },
+    {
+      "a": 37,
+      "b": 38,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 36,
+      "b": 38,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 36
+    },
+    {
+      "a": 30,
+      "b": 21,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 30
+    },
+    {
+      "a": 32,
+      "b": 53,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 32
+    },
+    {
+      "a": 33,
+      "b": 54,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 33
+    },
+    {
+      "a": 35,
+      "b": 63,
+      "order": 1,
+      "wedge": "hashed",
+      "wedge_from": 35
+    },
+    {
+      "a": 40,
+      "b": 41,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 40
+    },
+    {
+      "a": 42,
+      "b": 43,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 42
+    },
+    {
+      "a": 46,
+      "b": 67,
+      "order": 1,
+      "wedge": "solid",
+      "wedge_from": 46
+    },
+    {
+      "a": 48,
+      "b": 49,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 50,
+      "b": 51,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 50,
+      "b": 52,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 44,
+      "b": 45,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 54,
+      "b": 55,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 55,
+      "b": 56,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 55,
+      "b": 57,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 57,
+      "b": 58,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 58,
+      "b": 59,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 59,
+      "b": 60,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 60,
+      "b": 61,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 61,
+      "b": 62,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 62,
+      "b": 57,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 63,
+      "b": 64,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 64,
+      "b": 65,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 64,
+      "b": 66,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 67,
+      "b": 68,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 68,
+      "b": 69,
+      "order": 2,
+      "wedge": null,
+      "wedge_from": null
+    },
+    {
+      "a": 68,
+      "b": 70,
+      "order": 1,
+      "wedge": null,
+      "wedge_from": null
+    }
+  ],
+  "rings": [
+    {
+      "id": "phA",
+      "atoms": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "kekule"
+    },
+    {
+      "id": "phB",
+      "atoms": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "kind": "kekule"
+    },
+    {
+      "id": "phC",
+      "atoms": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "kind": "kekule"
+    },
+    {
+      "id": "rA",
+      "atoms": [
+        48,
+        47,
+        50,
+        32,
+        31,
+        30
+      ],
+      "kind": "kekule"
+    },
+    {
+      "id": "rB",
+      "atoms": [
+        32,
+        33,
+        34,
+        42,
+        44,
+        46,
+        47,
+        50
+      ],
+      "kind": "kekule"
+    },
+    {
+      "id": "rC",
+      "atoms": [
+        34,
+        35,
+        36,
+        39,
+        40,
+        42
+      ],
+      "kind": "aliphatic"
+    },
+    {
+      "id": "oxet",
+      "atoms": [
+        35,
+        36,
+        38,
+        37
+      ],
+      "kind": "aliphatic"
+    }
+  ],
+  "counts": {
+    "heavy": 62,
+    "rings": 7,
+    "heteroatoms": {
+      "O": 14,
+      "N": 1
+    }
+  }
+}
