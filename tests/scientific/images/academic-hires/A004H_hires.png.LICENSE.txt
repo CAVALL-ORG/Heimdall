@@ -1,0 +1,8 @@
+A004H
+Source: synthesized via Indigo render of manifest expected_canonical_smiles
+Indigo endpoint: http://127.0.0.1:8002/v2/indigo/render
+Render dims: 1631x1165 (tuned for >=80% fill)
+Source SMILES: CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O
+License: derived asset — Indigo render of canonical SMILES; no third-party copyright.
+Original fixture: tests/scientific/images/academic/taxol_core.png (paired control).
+Notes: Full paclitaxel (taxol). Updated 2026-05-15: filename says 'taxol_core' but the image is full paclitaxel (N-benzoyl phenylisoserine side chain + benzoate ester + 2'-OH all visible — confirmed by image inspection). Previous expected SMILES was the simplified baccatin core which mismatched the image. Grading: flat (connectivity) chemistry_gate + visual evaluator gate.

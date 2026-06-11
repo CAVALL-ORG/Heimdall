@@ -1,0 +1,19 @@
+# Python dependencies for the Heimdall test/eval harness — CONTRIBUTORS ONLY.
+#
+# The MCP server itself is Node/TypeScript and needs NO Python. These packages
+# are for:
+#   - the image-truth eval grader + manifest / complexity tooling  -> rdkit
+#   - the panel / figure crop utility                              -> pillow
+#   - the optional Indigo shim (also enables canonical SMILES +    -> epam.indigo
+#     full CIP/wedge stereo at runtime, via HEIMDALL_PYTHON)
+#
+# Clean isolated setup (see tests/TESTING.md), from the repo root:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements-dev.txt
+#   export HEIMDALL_PYTHON="$PWD/.venv/bin/python"
+#
+# epam.indigo is pinned to the version the stereo suite was validated against;
+# rdkit / pillow track latest (their canonicalization / imaging output is stable).
+epam.indigo==1.43.0
+rdkit
+pillow

@@ -1,0 +1,7 @@
+A005
+Source: https://pubchem.ncbi.nlm.nih.gov/compound/13342
+Source type: PubChem-with-cross-ref
+License: Public domain (PubChem) / fair-use citation (paper)
+Citation: PubChem CID 13342; primary-source X-ray: Moncrief & Lipscomb, J. Am. Chem. Soc. 1965, 87, 4963 (DOI 10.1021/ja00949a056).
+Gold-truth SMILES: CC[C@@]1(C[C@H]2C[C@@](C3=C(CCN(C2)C1)C4=CC=CC=C4N3)(C5=C(C=C6C(=C5)[C@]78CCN9[C@H]7[C@@](C=CC9)([C@H]([C@@]([C@@H]8N6C)(C(=O)OC)O)OC(=O)C)CC)OC)C(=O)OC)O
+Notes: Dimeric Catharanthus indole alkaloid; K~9 saddle clusters across two indoline + indole halves. Topology slot: extends A004 paclitaxel class.

@@ -1,0 +1,4 @@
+# Default owners for all paths. Used by GitHub to request reviews on pull requests
+# when branch protection requires code owner approval.
+
+* @Ethan46290 @ronsarma

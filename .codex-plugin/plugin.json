@@ -1,0 +1,20 @@
+{
+  "name": "heimdall",
+  "version": "0.1.0",
+  "description": "Image/PDF -> SMILES with Ketcher as the source of truth.",
+  "author": { "name": "Cavall Labs", "email": "ethan@cavall.ai", "url": "https://github.com/CAVALL-ORG/Heimdall" },
+  "homepage": "https://github.com/CAVALL-ORG/Heimdall",
+  "repository": "https://github.com/CAVALL-ORG/Heimdall",
+  "license": "BSD-3-Clause",
+  "keywords": ["chemistry", "smiles", "molecule", "ketcher", "image-to-structure"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Heimdall",
+    "shortDescription": "Image/PDF to SMILES, Ketcher-backed",
+    "longDescription": "Transcribe drawn chemical structures from an image or PDF into SMILES, with Ketcher (not the model) authoring every SMILES.",
+    "developerName": "Cavall Labs",
+    "category": "Science",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/CAVALL-ORG/Heimdall"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "heimdall",
+  "description": "Image/PDF -> SMILES skills + Ketcher MCP server",
+  "owner": { "name": "Cavall Labs", "email": "ethan@cavall.ai" },
+  "plugins": [
+    {
+      "name": "heimdall",
+      "description": "Image/PDF -> SMILES with Ketcher as the source of truth",
+      "version": "0.1.0",
+      "source": "./",
+      "author": { "name": "Cavall Labs" }
+    }
+  ]
+}

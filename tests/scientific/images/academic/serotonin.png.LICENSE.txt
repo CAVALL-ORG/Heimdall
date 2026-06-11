@@ -1,0 +1,6 @@
+A007
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Serotonin.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Serotonin skeletal (PD).
+Expected SMILES: NCCc1c[nH]c2ccc(O)cc12
+Notes: Indole alkaloid.

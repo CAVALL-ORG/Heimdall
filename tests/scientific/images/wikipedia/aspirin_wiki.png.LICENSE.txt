@@ -1,0 +1,6 @@
+W001
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Aspirin-skeletal.svg?width=512
+License: Public domain
+Citation: Wikimedia Commons — Aspirin (PD).
+Expected SMILES: CC(=O)Oc1ccccc1C(=O)O
+Notes: Smaller render — same molecule as A001.

@@ -1,0 +1,6 @@
+A006
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/ATP_chemical_structure.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — ATP 2D skeletal (PD).
+Expected SMILES: C1=NC2=C(C(=N1)N)N=CN2[C@H]3[C@@H]([C@@H]([C@H](O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O
+Notes: ATP free acid (2D skeletal, not the previous 3D ball-stick render).

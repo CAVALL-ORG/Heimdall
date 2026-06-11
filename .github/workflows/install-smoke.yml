@@ -1,0 +1,79 @@
+name: install-smoke
+
+# Proves the published-install path works on every OS a client can run on:
+# pack the exact tarball, cold-install it into a throwaway dir with an EMPTY
+# browser cache, then drive the real MCP stdio protocol — forcing a genuine
+# per-OS Chromium download — and assert the handshake is fast and the runtime
+# reaches ready. This is the cross-platform guarantee for the 30s-timeout fix.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  cold-install:
+    name: cold-install (${{ matrix.os }}, node ${{ matrix.node }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        # Floor is node 20.19 (first release with require(ESM)); ketcher-core's
+        # CJS build requires ESM-only d3, which node 18 cannot load.
+        node: [20]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install workspace deps
+        run: npm ci
+
+      - name: Build + pack the server tarball
+        id: pack
+        shell: bash
+        run: |
+          set -euo pipefail
+          # npm writes notices to stderr and the tarball filename to stdout
+          # (last line); the tarball lands in the repo root (cwd). Capturing the
+          # name beats globbing $GITHUB_WORKSPACE, which on Windows (Git Bash)
+          # is a backslash path that no forward-slash glob can match.
+          TGZ=$(npm pack --workspace server | tail -1)
+          test -f "$TGZ" || { echo "::error::npm pack produced no tarball ($TGZ)"; exit 1; }
+          # $(pwd) is bash-native (forward slashes) on every OS, Windows included.
+          echo "tgz=$(pwd)/$TGZ" >> "$GITHUB_OUTPUT"
+
+      - name: Cold-install the tarball into a throwaway dir
+        id: coldinstall
+        shell: bash
+        run: |
+          set -euo pipefail
+          # RUNNER_TEMP is a backslash path on Windows; normalize to a bash-native
+          # path so mkdir/cd/install all work. Keep the dir OUTSIDE the repo so npm
+          # does not walk up into the workspace root.
+          TMP="$RUNNER_TEMP"
+          command -v cygpath >/dev/null 2>&1 && TMP="$(cygpath -u "$RUNNER_TEMP")"
+          DIR="$TMP/coldinstall"
+          rm -rf "$DIR"; mkdir -p "$DIR"
+          cd "$DIR"
+          npm init -y >/dev/null
+          echo "installing ${{ steps.pack.outputs.tgz }}"
+          npm install --no-fund --no-audit "${{ steps.pack.outputs.tgz }}"
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+
+      - name: Cold MCP smoke (real Chromium download for this OS)
+        shell: bash
+        env:
+          # Empty, isolated browser cache -> forces the lazy first-run download
+          # through the bundled Playwright CLI on THIS OS.
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/pw-browsers
+          KETCHER_AGENT_MODE: standalone
+        run: |
+          set -euo pipefail
+          BIN="${{ steps.coldinstall.outputs.dir }}/node_modules/@cavall/heimdall-mcp-server/dist/mcp/server.mjs"
+          test -f "$BIN" || { echo "::error::cold-installed server binary missing at $BIN"; exit 1; }
+          node "$(pwd)/server/scripts/mcp-coldstart-smoke.mjs" "$BIN"

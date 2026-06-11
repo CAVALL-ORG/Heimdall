@@ -1,0 +1,7 @@
+# xelatex byproducts — regenerate via `xelatex <panel>.tex`
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

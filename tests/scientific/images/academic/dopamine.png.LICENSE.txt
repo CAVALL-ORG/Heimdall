@@ -1,0 +1,6 @@
+A008
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Dopamine.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Dopamine skeletal (PD).
+Expected SMILES: NCCc1ccc(O)c(O)c1
+Notes: Catecholamine.

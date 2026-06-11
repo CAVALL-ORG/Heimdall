@@ -1,0 +1,6 @@
+A002
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Benzylpenicillin-2D-skeletal.png?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Benzylpenicillin skeletal (PD).
+Expected SMILES: CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)Cc3ccccc3)C(=O)O)C
+Notes: Penicillin G β-lactam.

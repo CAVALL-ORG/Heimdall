@@ -1,0 +1,6 @@
+W004
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Nicotine.svg?width=512
+License: Public domain
+Citation: Wikimedia Commons — Nicotine (PD).
+Expected SMILES: CN1CCC[C@H]1c2cccnc2
+Notes: Pyridine + pyrrolidine, S-configuration.

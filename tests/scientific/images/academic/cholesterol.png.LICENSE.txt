@@ -1,0 +1,6 @@
+A003
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Cholesterol.svg?width=1024
+License: Public domain
+Citation: Wikimedia Commons — Cholesterol skeletal (PD).
+Expected SMILES: C[C@H](CCCC(C)C)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CC=C4[C@@]3(CC[C@@H](C4)O)C)C
+Notes: Cholesterol — multiple stereocenters.

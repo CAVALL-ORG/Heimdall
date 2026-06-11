@@ -1,0 +1,8 @@
+A011H
+Source: synthesized via Indigo render of manifest expected_canonical_smiles
+Indigo endpoint: http://127.0.0.1:8002/v2/indigo/render
+Render dims: 1349x869 (tuned for >=80% fill)
+Source SMILES: C[C@]12O[C@H]3[C@@H](O)C[C@@H](CC(C=O)=C)O[C@@H]3C[C@@H]1O[C@@H]1CC[C@@](O)(C)[C@@H](CC/C=C\C=C)O[C@H]1CC2
+License: derived asset — Indigo render of canonical SMILES; no third-party copyright.
+Original fixture: tests/scientific/images/academic/hemibrevetoxin_b.png (paired control).
+Notes: Hemibrevetoxin B — tier-2 calibration row (PLAN-a004-class-robustness-2026-05-22). Marine polyether ladder; K=10, 4 fused tetrahydropyrans. Topology slot: ladder fusion — no prior coverage in manifest. Documented substitution from the original brevetoxin A AB-ring fragment ask (no primary-source K~5 fragment SMILES was located in the sourcing pass; hemibrevetoxin B preserves topology intent). Source: PubChem CID 6442821. Substituted into the brevetoxin-fragment slot (plan documented ≤2-ring cap, K~5; substituted to deliver high-K polyether-ladder coverage which is what that slot tests). 4-ring trans-fused polyether ladder.

@@ -1,0 +1,5 @@
+{
+  "//": "Authoritative CI typecheck config. Extends tsconfig.json but narrows include to src/ only. vite.config.ts (in tsconfig.json's include) imports @vitejs/plugin-react, whose .d.ts uses a string export name (`as \"module.exports\"`) that the pinned TypeScript parser cannot read — a PARSE error skipLibCheck cannot suppress. Dropping vite.config.ts here keeps `npm run typecheck` green over the actual backend source. Pin: package.json devDependencies.typescript must stay < 5.6 (5.6+ introduces unrelated strictness regressions in crop.ts/validate.ts).",
+  "extends": "./tsconfig.json",
+  "include": ["src"]
+}

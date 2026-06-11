@@ -1,0 +1,91 @@
+Heimdall
+Copyright (c) 2026 Cavall Labs
+
+This product is licensed under the BSD 3-Clause License (BSD-3-Clause); see
+the LICENSE file.
+
+------------------------------------------------------------------------------
+THIRD-PARTY SOFTWARE NOTICES AND ATTRIBUTIONS
+------------------------------------------------------------------------------
+
+This product depends on, and consumes UNMODIFIED, the third-party software
+listed below. None of these components are vendored or patched; they are
+installed as ordinary published dependencies (npm packages / a PyPI wheel)
+and used through their public APIs. Each remains the property of its
+respective copyright holder and is governed by its own license, reproduced or
+referenced via the URLs below.
+
+The licenses of all third-party dependencies were verified from the installed
+package metadata at the time of authoring (2026-06-08):
+
+  - ketcher-core      3.15.0-rc.1  package.json "license": "Apache-2.0"
+  - ketcher-react     3.15.0-rc.1  package.json "license": "Apache-2.0"
+  - ketcher-standalone 3.15.0-rc.1 package.json "license": "Apache-2.0"
+  - playwright        1.60.0       package.json "license": "Apache-2.0"
+                                   (ships node_modules/playwright/LICENSE =
+                                    Apache License, Version 2.0)
+  - epam.indigo                    PyPI metadata "License": "Apache-2.0"
+                                   (classifier: License :: OSI Approved ::
+                                    Apache Software License)
+  - sharp             0.34.5       package.json "license": "Apache-2.0"
+  - @img/sharp-libvips-*  1.2.x    package.json "license": "LGPL-3.0-or-later"
+                                   (prebuilt, unmodified libvips native binary)
+
+------------------------------------------------------------------------------
+
+Ketcher
+-------
+Copyright (c) EPAM Systems, Inc. (EPAM Life Sciences)
+License: Apache License, Version 2.0
+Homepage: https://github.com/epam/ketcher
+
+Consumed unmodified via the npm packages ketcher-core, ketcher-react, and
+ketcher-standalone. Heimdall drives Ketcher as the source of truth for all
+molecule construction and SMILES export; the Ketcher source is never patched
+or vendored.
+
+Indigo (epam.indigo)
+--------------------
+Copyright (c) EPAM Systems, Inc. (EPAM Life Sciences)
+License: Apache License, Version 2.0
+Homepage: https://lifescience.opensource.epam.com/indigo/
+
+Used optionally, unmodified, via the epam.indigo PyPI wheel for canonical
+SMILES generation and PDF rendering. Heimdall functions without it in
+standalone mode; when present it is invoked through its public HTTP/library
+API and is never patched or vendored.
+
+Playwright
+----------
+Copyright (c) Microsoft Corporation
+License: Apache License, Version 2.0
+Homepage: https://github.com/microsoft/playwright
+
+Consumed unmodified via the npm package playwright to drive a headless
+Chromium instance that hosts the Ketcher runtime. Used through its public API;
+never patched or vendored.
+
+sharp / libvips
+---------------
+Copyright (c) Lovell Fuller and contributors (sharp)
+Copyright (c) John Cupitt and libvips contributors (libvips)
+License: sharp -- Apache License, Version 2.0
+         libvips (bundled as @img/sharp-libvips-*) -- GNU Lesser General
+         Public License, version 3 or later (LGPL-3.0-or-later)
+Homepage: https://github.com/lovell/sharp  |  https://www.libvips.org/
+
+Consumed unmodified via the npm package sharp for image rasterization and
+cropping. The libvips native library ships as a prebuilt, unmodified binary
+(@img/sharp-libvips-*) that is dynamically loaded -- neither patched nor
+statically combined with Heimdall's source. As an LGPL component used through
+its public API, it remains independently replaceable.
+
+------------------------------------------------------------------------------
+
+A copy of the Apache License, Version 2.0, may be obtained at:
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+A copy of the GNU Lesser General Public License, version 3, may be obtained at:
+
+    https://www.gnu.org/licenses/lgpl-3.0.html

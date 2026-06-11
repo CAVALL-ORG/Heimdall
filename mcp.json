@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "heimdall": {
+      "command": "npx",
+      "args": ["-y", "@cavall/heimdall-mcp-server"],
+      "env": { "KETCHER_AGENT_MODE": "auto" }
+    }
+  }
+}

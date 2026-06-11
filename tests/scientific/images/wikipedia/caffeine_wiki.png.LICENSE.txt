@@ -1,0 +1,6 @@
+W002
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Caffeine_structure.svg?width=512
+License: Public domain
+Citation: Wikimedia Commons — Caffeine (PD).
+Expected SMILES: Cn1cnc2c1c(=O)n(C)c(=O)n2C
+Notes: Tautomeric writing acceptable.

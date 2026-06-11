@@ -1,0 +1,6 @@
+W003
+Source: https://commons.wikimedia.org/wiki/Special:FilePath/Morphine.svg?width=512
+License: Public domain
+Citation: Wikimedia Commons — Morphine (PD).
+Expected SMILES: CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5
+Notes: Pentacyclic — many stereocenters.

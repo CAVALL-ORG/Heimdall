@@ -1,0 +1,9 @@
+# Repo-scoped Codex MCP config. Requires Codex >= 0.34 and that this project is
+# trusted in ~/.codex/config.toml (untrusted projects skip project-local config).
+# `npx -y` resolves the published @cavall/heimdall-mcp-server package.
+[mcp_servers.heimdall]
+command = "npx"
+args = ["-y", "@cavall/heimdall-mcp-server"]
+
+[mcp_servers.heimdall.env]
+KETCHER_AGENT_MODE = "auto"

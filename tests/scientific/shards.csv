@@ -1,0 +1,30 @@
+parallel_shard,suite_count,test_ids,notes
+P0-primitives,9,P013 P004 P005 P006 P007 P008 P009 P010 P012,Sequential preflight/gate
+S1-fragments,10,F001 F002 F003 F004 F005 F006 F007 F008 F009 F010,
+S10-negative-images,7,N001 N002 N003 N004 I-RFG-001 I-RFG-002 I-RFG-003,Refusal expected; Image-rebuild v3 phase 5 fixtures included
+S11-academic-images,11,A001 A002 A003 A004 A005 A006 A007 A008 A009 A011 I-FNL-002,Requires download_academic_images.ts; Image-rebuild v3 phase 5 fixtures included
+S12-wikipedia-images,6,W001 W002 W003 W004 W005 W006,Requires download_academic_images.ts (Wikimedia Commons)
+S13-roundtrip,4,RT001 RT002 RT003 RT004,Must mismatch then self-correct
+S14-diverse-halogen,5,D001 D002 D003 D004 D005,
+S15-diverse-drugs,10,D006 D007 D008 D009 D010 D034 D035 D036 D037 D038,
+S16-diverse-heterocycle,10,D011 D012 D013 D014 D015 D016 D017 D018 D019 D020,
+S17-diverse-pah,3,D021 D022 D023,
+S18-diverse-cage,3,D024 D025 D026,
+S19-diverse-sulfur-phos,4,D027 D028 D029 D030,
+S2-functional,10,T001 T002 T003 T004 T005 T006 T007 T008 T009 T010,
+S20-diverse-strained,3,D031 D032 D033,
+S21-diverse-amino-acid,5,D039 D040 D041 D042 D043,
+S22-diverse-nucleobase,5,D044 D045 D046 D053 A010,
+S23-diverse-steroid-polyene,2,D047 D048,
+S24-diverse-small-fg,4,D049 D050 D051 D052,
+S25-diverse-sugar,1,D054,
+S26-diverse-macrocycle,1,D055,
+S3-charge,10,C001 C002 C003 C004 C005 C006 C007 C008 C009 C010,
+S4-radicals,8,R001 R002 R003 R004 R005 R006 R007 R008,
+S5-regio,10,G001 G002 G003 G004 G005 G006 G007 G008 G009 G010,
+S6-stereo,8,S001 S002 S003 S004 S005 S006 S007 S008,
+S7-canvas,5,K001 K002 K003 K004 K005,
+S8-reactions,8,X001 X002 X003 X004 X005 X006 X007 X008,
+S9-images-clean,10,I001 I002 I003 I004 I005 I006 I007 I008 I009 I010,Round-trip required for non-trivial
+S9b-images-noisy,6,I011 I012 I013 I014 I015 I016,Round-trip required for all
+S9c-images-adversarial,5,I017 I018 I019 I020 I-FNL-001,Round-trip required for all; Image-rebuild v3 phase 5 fixtures included
